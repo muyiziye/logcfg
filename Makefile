@@ -1,7 +1,9 @@
 all: logcfg
-	gcc lex.yy.c -lfl -o logcfg
 
 logcfg: lex.yy.c
+	gcc lex.yy.c -lfl -o logcfg
+
+lex.yy.c:
 	flex LogCfg.l
 
 .PHONY:clean
